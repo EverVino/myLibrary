@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="practice.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>LibraryApp</title>
+</head>
+<body>
+    <h1>My Library</h1>
+    <div class="content">
+        
+    </div>
+    <div>
+        
+        <div class="addingNewBook" hidden>
+            <fieldset>
+                <legend>Info about the book</legend>
+                <label for="title">Title</label>
+                <input class="titulo" type="text" id="title">
+
+                <label for="author">Author</label>
+                <input class="autor" type="text" id="author">
+
+                <label for="page">Number of pages</label>
+                <input class="paginas" type="text" id="page">
+
+                <div>
+                    <h4>Have you read it ?</h4>
+                    <input type="radio" name="read" id="yesRead" value="true">
+                    <label for="yesRead">Yes</label>
+                    <input type="radio" name="read" id="noRead" value="false" checked>
+                    <label for="noRead">No</label>
+                </div>
+            </div>
+            </fieldset>
+        </div>
+        <button class="addBook">Add a New book</button>
+    </div>
+</body>
+</html>
