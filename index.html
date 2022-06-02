@@ -19,16 +19,16 @@
             <fieldset>
                 <legend>Info about the book</legend>
                 <label for="title">Title</label>
-                <input class="titulo" type="text" id="title">
+                <input class="newtitulo" type="text" id="title" required>
 
                 <label for="author">Author</label>
-                <input class="autor" type="text" id="author">
+                <input class="autor" type="text" id="author" required>
 
                 <label for="page">Number of pages</label>
-                <input class="paginas" type="text" id="page">
+                <input class="paginas" type="number" id="page" required>
 
                 <div>
-                    <h4>Have you read it ?</h4>
+                    <p>Have you read it ?</p>
                     <input type="radio" name="read" id="yesRead" value="true">
                     <label for="yesRead">Yes</label>
                     <input type="radio" name="read" id="noRead" value="false" checked>
