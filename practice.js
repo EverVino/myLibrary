@@ -14,6 +14,7 @@ book.prototype.changeRead = function() {
 let goodBook = new book("The Hobbit", "J.R.R. Tolkien", 295, false);
 let otherBook1 = new book("Encyclopedia of Mathematics","James Stuart", 405, true)
 let otherBook2 = new book("A Mathematical Introduction", "Herbert Enderton", 205, false)
+
 myLibrary.push(goodBook);
 myLibrary.push(otherBook1);
 myLibrary.push(otherBook2);
