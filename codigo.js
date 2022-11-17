@@ -18,8 +18,6 @@ class Library {
 
     addBook(book){
         this.libros.push(book);
-        
-        
     }
 
     removeBook(e){
@@ -37,7 +35,6 @@ class Library {
     etiquetaLeido(cadena) {
         if (cadena){
             return ["leido", "Read"]
-    
         }
         else {
             return ["noleido", "Unread"]
@@ -52,6 +49,7 @@ class Library {
         e.target.setAttribute("id", cl);
         e.target.textContent = men;
     }
+
     mostrarLibros() {
                
         for (let libro of this.libros){
@@ -110,7 +108,7 @@ class Formulario {
         this.form = document.querySelector(".addingNewBook");
         
         this.botonNuevoLibro = document.querySelector(".addBook");
-        this.botonNuevoLibro.addEventListener("click", () => {this.addNewBook()});
+        this.botonNuevoLibro.addEventListener("click", () => {this.addNewBook();});
     }
     
     addNewBook() {
@@ -122,6 +120,20 @@ class Formulario {
             const newTitulo = document.querySelector(".newtitulo");
             const newAutor = document.querySelector(".autor");
             const newPaginas = document.querySelector(".paginas");
+            
+            if (newTitulo.value.length == 0){
+                alert("You should fill the title name space");
+                return
+                
+            }
+            if (newAutor.value.length == 0){
+                alert("You should fill the author name space");
+                return 
+            }
+            if (newPaginas.value.length == 0){
+                alert("You should fill the pages number space correctly");
+                return
+            }
             let haveRead = document.querySelector("input[name='read']:checked").value;
             let newLibro = new Book(newTitulo.value ,newAutor.value, newPaginas.value, haveRead);
             this.libreria.libros.push(newLibro);
